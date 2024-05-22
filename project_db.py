@@ -22,3 +22,7 @@ def login_user(request_data):
     if not resp:
         return 'User not registered
     return "Success"
+
+def trimming(feature):
+    q1 = feature.quantile(0.25)
+    return q1
